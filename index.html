@@ -15,48 +15,65 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="SRC/style.css">
 
-  <!-- Toggle To-Do List -->
+  <!-- Toggle To-Do List and Bookmark List -->
   <a href="#" onclick="toggle_visibility('dragme');" style="color: white;">Toggle To-Do List</a>
-</head>
+  <a href="#" onclick="toggle_visibility('linkme');" style="color: white;">Toggle Bookmark List</a>
 
+</head>
 <body>
   <div id="dragme">
     <div id="todoapp">
       <!-- To-Do List Content -->
       <a href="#" id="closeTDL" onclick="toggle_visibility('dragme');" style="color: white; background-color: transparent; text-decoration: none;">X&nbsp;</a>
-      <div id="todoapp">
-        <h2>TO-DO LIST</h2>
-        <section id="main">
-          <ul id="todo-list"></ul>
-        </section>
-        <header>
-          <input id="new-todo" type="text" placeholder="Write a new item and hit 'Enter'...">
-        </header>
-        <footer>
-          <a id="clear-completed">Clear completed</a>
-          <div id="todo-count"></div>
-        </footer>
-      </div>
-
-      <!-- JavaScript Templates -->
-      <script type="text/template" id="item-template">
-        <div class="view">
-          <label>
-            <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-            <i></i><span title="Double-click to edit a todo."><%- title %></span>
-          </label>
-          <a class="destroy">&minus;</a>
-        </div>
-        <input class="edit" type="text" value="<%- title %>">
-      </script>
-      <script type="text/template" id="stats-template">
-        <% if (done) { %>
-          <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
-        <% } %>
-        <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
-      </script>
+      <h2>TO-DO LIST</h2>
+      <section id="main">
+        <ul id="todo-list"></ul>
+      </section>
+      <header>
+        <input id="new-todo" type="text" placeholder="Write a new item and hit 'Enter'...">
+      </header>
+      <footer>
+        <a id="clear-completed">Clear completed</a>
+        <div id="todo-count"></div>
+      </footer>
     </div>
   </div>
+
+  <div id="linkme">
+    <div id="bookmarkapp">
+      <!-- Bookmark List Content -->
+      <a href="#" id="closeBM" onclick="toggle_visibility('linkme');" style="color: white; background-color: transparent; text-decoration: none;">X&nbsp;</a>
+      <h2>BOOKMARK LIST</h2>
+      <section id="main">
+        <ul id="mark-list"></ul>
+      </section>
+      <header>
+        <input id="new-mark" type="text" placeholder="Write a new item and hit 'Enter'...">
+      </header>
+      <footer>
+        <a id="clear-completed">Clear completed</a>
+        <div id="mark-count"></div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- JavaScript Templates -->
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <label>
+        <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+        <i></i><span title="Double-click to edit a todo."><%- title %></span>
+      </label>
+      <a class="destroy">&minus;</a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>">
+  </script>
+  <script type="text/template" id="stats-template">
+    <% if (done) { %>
+      <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+    <% } %>
+    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+  </script>
 
   <!-- JavaScript for toggling visibility -->
   <script type="text/javascript">
