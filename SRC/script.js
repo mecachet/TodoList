@@ -1,6 +1,4 @@
 $(function () {
-  // Todo Model
-  // ----------
 
   // Our basic **Todo** model has `title`, `order`, and `done` attributes.
   var Todo = Backbone.Model.extend({
