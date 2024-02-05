@@ -12,6 +12,7 @@ $(function () {
       this.save({ done: !this.get("done") });
     },
   });
+
   var TodoList = Backbone.Collection.extend({
     model: Todo,
     localStorage: new Backbone.LocalStorage("todos-backbone"),
@@ -21,12 +22,15 @@ $(function () {
     remaining: function () {
       return this.without.apply(this, this.done());
     },
+    nextOrder: function () {
       if (!this.length) return 1;
       return this.last().get("order") + 1;
     },
     comparator: "order",
   });
+
   var Todos = new TodoList();
+
   var TodoView = Backbone.View.extend({
     tagName: "li",
     template: _.template($("#item-template").html()),
@@ -70,6 +74,7 @@ $(function () {
       this.model.destroy();
     },
   });
+
   var AppView = Backbone.View.extend({
     el: $("#todoapp"),
     statsTemplate: _.template($("#stats-template").html()),
@@ -125,5 +130,6 @@ $(function () {
       return false;
     },
   });
+
   var App = new AppView();
 });
