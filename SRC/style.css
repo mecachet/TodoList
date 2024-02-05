@@ -11,6 +11,18 @@ body {
 
 *:focus{outline:none !important;}
 
+#toggle-buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center items vertically */
+	margin-top: 20px; /* Adjust as needed */
+  }
+  
+  #todo-toggle,
+  #bookmark-toggle {
+	margin-bottom: 10px; /* Adjust as needed */
+  }
+
 #todoapp {
 	background: black;
 	margin-bottom: 40px;
@@ -674,7 +686,7 @@ top:15%;
 left:39%;
 }
 
-#closeTDL {
+#closeBM {
 
 	font-weight: bold;
 	text-align:center;
