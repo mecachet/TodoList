@@ -1,5 +1,4 @@
 $(function () {
-
   var Todo = Backbone.Model.extend({
     defaults: function () {
       return {
@@ -137,7 +136,6 @@ $(function () {
 // Bookmark Element
 
 $(function () {
-
   var Mark = Backbone.Model.extend({
     defaults: function () {
       return {
