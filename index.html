@@ -4,19 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage.js"></script>
-    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="SRC/style.css" />
-    <!-- Toggle To-Do List -->
     <a href="#" onclick="toggle_visibility('dragme');" style="color: white"
       >Toggle To-Do List</a
     >
-    <!-- To-Do List Container -->
     <div id="dragme">
       <div id="todoapp">
         <a
@@ -47,7 +43,6 @@
             <div id="todo-count"></div>
           </footer>
         </div>
-        <!-- Templates -->
         <script type="text/template" id="item-template">
           <div class="view">
               <label><input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>/>
@@ -67,7 +62,6 @@
     </div>
   </head>
   <body>
-    <!-- Toggle To-Do List Script -->
     <script type="text/javascript">
       function toggle_visibility(id) {
         var e = document.getElementById(id);
