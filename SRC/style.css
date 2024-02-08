@@ -1,3 +1,9 @@
+.widgets a {
+    display: block;
+    margin-right: 10px; /* Adjust spacing between links */
+    color: white;
+}
+
 body {
 	color:#4a5b65;
 	font-family: OCR-A;
@@ -98,7 +104,7 @@ body {
 	font-size:14px;
 	margin:0;
 	padding:20px 15px;
-	width:270px;
+	width:100%;
 	-webkit-transition: all .2s linear;
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
@@ -229,8 +235,6 @@ body {
 	text-decoration: line-through;
 }
 
-
-
 #todo-list li:hover .destroy {
   	display: block;
 	
@@ -282,8 +286,6 @@ body {
 #todo-list li .edit {
 	display: none;
 }
-
-
 
 #todoapp footer {
 	display: none;
@@ -382,12 +384,11 @@ left:39%;
 	background: black;
 	margin-bottom: 40px;
 	margin:0px auto;
-	width: 300px;
+	width: 100%;
 
 }
 
 #bookmarkapp h2 {
-	
 	font-weight: bold;
 	background-color: #292929;
 	border-bottom:1px solid black;
@@ -402,8 +403,6 @@ left:39%;
 	margin:0;
 }
 
-
-
 #bookmarkapp ul, #bookmarkapp li {
 	list-style: none;
 	margin:0;
@@ -411,7 +410,6 @@ left:39%;
 }
 
 #bookmarkapp li {
-
 	background-color: #202020;
 	border-bottom:1px solid black;
 	color: #339933;
@@ -453,7 +451,7 @@ left:39%;
 	font-size:14px;
 	margin:0;
 	padding:20px 15px;
-	width:270px;
+	width:100%;
 	-webkit-transition: all .2s linear;
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
@@ -475,7 +473,7 @@ left:39%;
 	color:#fff;
 }
 
-#bookmarkapp ::-webkit-input-placeholder {color: #77CC77;} /* WebKit browsers */
+#bookmarkapp ::-webkit-input-placeholder {color: #77CC77;}
 }
 
 #main {
@@ -614,8 +612,6 @@ left:39%;
 	display: none;
 }
 
-
-
 #markapp footer {
 	display: none;
 	position:relative;
@@ -671,7 +667,7 @@ left:39%;
 	top: 1px;
 }
 
-#todo-count span {
+#mark-count span {
 	font-weight: bold;
 }
 
@@ -707,134 +703,50 @@ body {
   min-height: 100%;
 }
 
-body {
-  background: linear-gradient(180deg, #feead2, #fff8ee);
-  font-family: Open Sans;
-  font-size: 16px;
-  &:before {
-    content: '';
-    width: 800px;
-    height: 600px;
-    background: #f00;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-}
-
 
 /*--------------------
 Calculator
 --------------------*/
-.calculator {
-  width: 300px;
-  background: linear-gradient(135deg, #fcaf3b, #f25c2a);
-  box-shadow: 0 10px 28px #d8724a;
-  margin: 30px auto;
-  position: absolute;
-  overflow: hidden;
-  border-radius: 20px;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -62%);
+
+div input[type='button'], button {
+	width: 50px;
+	height: 50px;
+	margin: 2px 0;
 }
 
-
-/*--------------------
-screen
---------------------*/
-.screen {
-  background: #fff;
-  padding: 15px 28px;
-  height: 69px;
-  text-align: right;
-  font-size: 29px;
-  color: #4c455a;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 2px 3px #d8724a;
-  transition: color .6s ease-in-out;
-
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
+div input[type="text"] {
+	height: 50px;
+	width: 250px;
+	background-color: #202020;
+	color: darkgreen;
+	padding: 12px 20px;
+    margin-top: 100px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #666;
 }
 
+div.results input, div.results button {
+	height: 50px;
+	width: 104px;
+}
 
-/*--------------------
-Buttons
---------------------*/
-.buttons {
+div.results button {
+	background-color: #de3f53;
+	color: #fff;
+	border: 1px solid #de3f53;
+}
 
-  & button {
-    float: right;
-    border: none;
-    background: transparent;
-    color: #fff;
-    padding: 15px 10px;
-    outline: none;
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 14px;
-    focus: none!important;
+div.results input {
+	background-color: #fd7202;
+	color: #fff;
+	border: 1px solid #fd7202;
+}
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.1);;
-    }
-
-    &:active, &.active {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 14px;
-    }
-
-  }
-
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  & .numbers {
-    float: left;
-    width: 75%;
-    padding: 10px;
-
-    & button {
-      width: 33.3333%;
-      padding: 18px 10px;
-    }
-  }
-
-  & .operators {
-    float: right;
-    width: 25%;
-    padding: 16px 10px 10px;
-    background: rgba(0, 0, 0, 0.1);
-    min-height: 260px;
-
-    & button {
-      width: 100%;
-      padding: 11px 10px;
-      
-      &[data-val="x"] {
-        font-size: 13px;
-      }
-      
-      &[data-val="-"] {
-        font-size: 18px;
-      }
-
-      &[data-val="="] {
-        font-size: 16px;
-      }
-    }
-
-  }
+#plus, #minus, #by, #devide, #percent {
+	background-color: #77CC77;
+	color: #fff;
+	border: 1px solid #77CC77;
+	font-size: 16px;
 }
