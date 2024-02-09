@@ -34,9 +34,11 @@ body {
 	margin-bottom: 40px;
 	margin:0px auto;
 	width: 300px;
+
 }
 
 #todoapp h2 {
+	
 	font-weight: bold;
 	background-color: #292929;
 	border-bottom:1px solid black;
@@ -60,9 +62,11 @@ body {
 }
 
 #todoapp li {
+
 	background-color: #202020;
 	border-bottom:1px solid black;
 	color: #339933;
+
 }
 
 #todoapp li span{
@@ -74,17 +78,20 @@ body {
 }
 
 #todoapp label{
+
 	cursor:pointer;
 	display:block;
 	line-height: 56px;
 	padding: 0 15px; 
 	position: relative;
+
 }
 
 #todoapp li:hover {
 
 	background-color: #253B25;
 	color:#33CC33;
+
 }
 
 #todoapp input[type="text"] {
@@ -108,6 +115,7 @@ body {
 	-ms-border-radius: 0 0 5px 5px;
 	-o-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px;
+	
 }
 
 #todoapp input[type="text"]:hover{
@@ -126,6 +134,7 @@ body {
 }
 
 #todo-list {
+	
 	padding: 0;
 	list-style: none;
 	overflow-x: hidden;
@@ -139,7 +148,9 @@ body {
 }
 
 #todo-list::-webkit-scrollbar-track-piece {
+	
     background-color: #393939;
+    
 }
 
 #todo-list::-webkit-scrollbar-thumb:vertical {
@@ -155,6 +166,7 @@ body {
 }
 
 #todo-list li {
+	
 	position: relative;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
@@ -180,7 +192,6 @@ body {
 	width: 16px;	
 	z-index: 1;
 }
-
 .destroy {
 
 	vertical-align: middle;
@@ -203,6 +214,7 @@ body {
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
+
 }
 
 #todo-list  input.toggle[type="checkbox"]:checked + i::after{
@@ -225,6 +237,7 @@ body {
 
 #todo-list li:hover .destroy {
   	display: block;
+	
 }
 
 #todo-list .destroy:hover {
@@ -259,6 +272,7 @@ body {
 	-ms-border-radius: 0 0 0px 0px;
 	-o-border-radius: 0 0 0px 0px;
 	border-radius: 0 0 0px 0px;
+	
 }
 
 #todo-list li.editing .view {
@@ -356,6 +370,7 @@ left:39%;
 	padding-left: 15px;
 	margin-top:4px;
 	float:right;
+	
 }
 	
 	@font-face {
@@ -370,6 +385,7 @@ left:39%;
 	margin-bottom: 40px;
 	margin:0px auto;
 	width: 100%;
+
 }
 
 #bookmarkapp h2 {
@@ -397,6 +413,7 @@ left:39%;
 	background-color: #202020;
 	border-bottom:1px solid black;
 	color: #339933;
+
 }
 
 #bookmarkapp li span{
@@ -414,12 +431,14 @@ left:39%;
 	line-height: 56px;
 	padding: 0 15px; 
 	position: relative;
+
 }
 
 #bookmarkapp li:hover {
 
 	background-color: #253B25;
 	color:#33CC33;
+
 }
 
 #bookmarkapp input[type="text"] {
@@ -443,6 +462,7 @@ left:39%;
 	-ms-border-radius: 0 0 5px 5px;
 	-o-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px;
+	
 }
 
 #bookmarkapp input[type="text"]:hover{
@@ -681,25 +701,6 @@ html,
 body {
   min-height: 100%;
 }
-
-body {
-  background: linear-gradient(180deg, #feead2, #fff8ee);
-  font-family: Open Sans;
-  font-size: 16px;
-  &:before {
-    content: '';
-    width: 800px;
-    height: 600px;
-    background: #f00;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-}
-
-
 /*--------------------
 Calculator
 --------------------*/
